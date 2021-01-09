@@ -1,0 +1,72 @@
+.header__left {
+	// cho các thẻ con nằm chung 1 hàng
+	display: flex;
+	align-items: center;
+	.navbar-brand {
+		flex-grow: 1;
+		img {
+			width: 110px;
+		}
+	}
+	.header_categories {
+		flex-grow: 1;
+		@include styleText ($fs-1,$fw-normal,$color-black-light);
+	}
+	.searchForm {
+		flex-grow: 5;
+		.input-group {
+			background-color: $color-white-cream;
+			color: $color-black-0;
+			border: 1px solid $color-white-cream;
+			.form-control {
+				background-color: transparent;
+				border: transparent;
+				&:focus {
+					box-shadow: none;
+					background-color: $color-white-0;
+					border: 1px solid $color-gray-6;
+					border-right: transparent;
+
+					& + .input-group-append {
+						.input-group-text {
+							background-color: $color-white-0;
+							border: 1px solid $color-gray-6;
+							border-left: transparent;
+							&:hover {
+								color: $color-white-0;
+								background-color: $color-red-0;
+								border: $color-red-0;
+							}
+						}
+					}
+				}
+			}
+			.input-group-text {
+				background-color: transparent;
+				border: transparent;
+				border-radius: 0;
+				&:hover {
+					color: $color-white-0;
+					background-color: $color-red-0;
+					border: $color-red-0;
+				}
+			}
+		}
+	}
+}
+
+.header__right {
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				@include styleText ($fs-1,$fw-normal,$color-black-light);
+			}
+		}
+    }
+    
+    @include responsive('large'){
+        .header__business,.header__teach{
+            display: none;
+        }
+    }
+}

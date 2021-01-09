@@ -1,0 +1,26 @@
+.recommendations{
+    width: 100%;
+    height: 360px;
+    color: $color-white-0;
+    background-color: $color-black-light;
+    align-items: center;
+    .rowOne, .rowTwo, .rowThree{
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 40px;
+        
+    }
+    .rowTwo{
+        .textOne{
+            font-size: $fs-3;
+        }
+        .textTwo{
+            font-size: $fs-1;
+        }
+    }
+    
+}

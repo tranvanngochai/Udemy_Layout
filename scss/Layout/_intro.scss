@@ -1,0 +1,27 @@
+.myIntro{
+    background: linear-gradient(to right,$color-red-1,$color-red-0);
+    .intro_content{
+        width: 80%;
+        margin: auto;
+        
+        .intro_item{
+            i{
+                padding: $pd-2;
+                font-size: 60px;
+            }
+            .icon{
+                @include styleText(50px,$fw-bold,$color-red-0);
+                margin-right: $mg-2;
+            }
+            .icon_content{
+                padding-top: $pd-1;
+                p:first-child{
+                    @include styleText($fs-0 + 2,$fw-bold,$color-white-0); 
+                }
+                p:last-child{
+                    @include styleText($fs-0,$fw-normal,$color-white-0); 
+                }
+            }
+        }
+    }
+}
